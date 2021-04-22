@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,7 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryCreate.cs" />
+    <Compile Include="CategoryDetail.cs" />
+    <Compile Include="CategoryEdit.cs" />
+    <Compile Include="NoteCreate.cs" />
+    <Compile Include="NoteDetail.cs" />
+    <Compile Include="NoteEdit.cs" />
+    <Compile Include="NoteListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElevenNOte.Data\ElevenNote.Data.csproj">
+      <Project>{a42ca37e-0486-491a-9692-fae1c28f29c5}</Project>
+      <Name>ElevenNote.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
