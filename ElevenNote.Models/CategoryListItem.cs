@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace ElevenNote.Models
 {
-    public class CategoryDetail
+    public class CategoryListItem
     {
         [Required]
         [Display(Name = "Category Id")]
         public int CategoryId { get; set; }
         [Display(Name = "Category Name")]
         public string CategoryName { get; set; }
+        public override string ToString() => CategoryName;
     }
 }
