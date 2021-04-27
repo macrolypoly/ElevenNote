@@ -16,7 +16,8 @@ namespace ElevenNote.WebAPI.Controllers
     {
         private CategoryService CreateCategoryService()
         {
-            int categoryId = (int)Int64.Parse(User.Identity.GetUserId());
+           Guid categoryId = Guid.Parse(User.Identity.GetUserId());
+
             var categoryService = new CategoryService(categoryId);
             return categoryService;
         }
@@ -42,7 +43,7 @@ namespace ElevenNote.WebAPI.Controllers
             if (!service.CreateCategory(category))
                 return InternalServerError();
 
-            return Ok();
+            return Ok("added");
         }
         public IHttpActionResult Put(CategoryEdit category)
         {

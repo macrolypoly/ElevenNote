@@ -9,7 +9,6 @@ namespace ElevenNote.Models
 {
     public class CategoryCreate
     {
-       [Required]
         [Display(Name = "Category Id")]
         public int CategoryId { get; set; }
         [Display(Name = "Category Name")]

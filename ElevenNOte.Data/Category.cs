@@ -14,6 +14,6 @@ namespace ElevenNOte.Data
         [Required]
         [Display(Name = "Category Name")]
         public string CategoryName { get; set; }
-        //public ICollection<Note> Notes {get; set;}
+        public ICollection<Note> Notes {get; set;}
     }
 }

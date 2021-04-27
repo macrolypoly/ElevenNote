@@ -11,10 +11,10 @@ namespace ElevenNote.Services
 {
     public class CategoryService
     {
-        private readonly int _userId;
-        public CategoryService(int categoryId)
+        private readonly string _userId;
+        public CategoryService(Guid categoryId)
         {
-            _userId = categoryId;
+            _userId = categoryId.ToString();
         }
         public bool CreateCategory(CategoryCreate model)
         {
@@ -37,12 +37,12 @@ namespace ElevenNote.Services
                 var query =
                     ctx
                     .Categories
-                    .Where(e => e.CategoryId == _userId)
+                    .Where(e => e.CategoryId.ToString() == _userId)
                     .Select(
                         e =>
                         new CategoryListItem
                         {
-                            CategoryId = e.CategoryId,
+                            CategoryId = e.CategoryId.ToString(),
                             CategoryName = e.CategoryName
                         }
                         );
