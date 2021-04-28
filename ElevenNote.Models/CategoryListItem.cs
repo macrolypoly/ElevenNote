@@ -11,7 +11,7 @@ namespace ElevenNote.Models
     {
         [Required]
         [Display(Name = "Category Id")]
-        public string CategoryId { get; set; }
+        public int CategoryId { get; set; }
         [Display(Name = "Category Name")]
         public string CategoryName { get; set; }
         public override string ToString() => CategoryName;
